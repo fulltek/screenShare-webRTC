@@ -1,0 +1,29 @@
+<html>
+<head>
+    <style>
+        #messages {
+            text-align: left;
+            width: 50%;
+            padding: 1em;
+            border: 1px solid black;
+        }
+    </style>
+    <title>WebSocket测试客户端</title>
+</head>
+<body>
+	<div class="container">
+	    <div id="messages" class="messages"></div>
+	    <div class="input-fields">
+	        <p>输入消息点击发送: </p>
+	        <input id="message"/>
+	        <button id="send">发送</button>
+	
+	        <p>选择图片点击发送:</p>
+	        <input type="file" id="file" accept="image/*"/>
+	
+	        <button id="sendImage">发送图片</button>
+	    </div>
+	</div>
+</body>
+<script type="text/javascript"  src="/js/app.js"></script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>屏幕共享</title>
+</head>
+
+<body>
+	<!-- <a href="screenshare">共享你的屏幕</a> -->	
+	<div>
+		<div id="qrcode"></div>
+	</div>
+		<!-- Your screen will show up here. -->
+	<div>
+	<h3 style="margin: 5px">Your Screen</h3>
+	<video  style="width: 50vh; height: 50vh;" id="localVideo"
+			poster="https://img.icons8.com/dusk/64/000000/monitor.png" autoplay muted></video>
+	</div>
+	
+	<script type="text/javascript" src="js/qrcode.min.js" th:src="@{js/qrcode.min.js}"></script>
+	<script type="text/javascript" th:inline="javascript">
+		var room=[[${room}]];
+	</script>
+	<script type="text/javascript" src="js/s.js?reloads=true" th:src="@{js/s.js?reloads=true}" th:inline="javascript"></script>   
+</body>
+</html>
